@@ -1,0 +1,534 @@
+@use "./utils" as *;
+
+.shopping-bag-section {
+  display: flex;
+  flex-direction: column;
+  background: var(--src) center center / cover no-repeat;
+  background-color: rgb(255 255 255);
+  overflow: hidden;
+}
+
+.flex_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 58px auto 364px;
+  width: 94.38%;
+  max-width: 1208px;
+
+  @include md {
+    margin: 58px auto 150px;
+  }
+
+  @include sm {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+
+  @include xs {
+    margin: 58px auto 80px;
+  }
+
+  @include tn {
+    margin: 50px auto;
+  }
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px 0;
+  width: 731px;
+  min-width: 0;
+
+  @include sm {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.flex_col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 13px 0;
+  width: 100%;
+}
+
+.shopping-bag-title {
+  font: 500 13px/3.07 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.divider-line {
+  width: 100%;
+  height: 1px;
+  min-height: 1px;
+  background-color: rgb(201 201 201);
+}
+
+.flex_row1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 10px;
+  width: 94.39%;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.flex_row2 {
+  display: flex;
+  gap: 0 15px;
+  width: 313px;
+  min-width: 0;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.flex_col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 11px 0;
+  width: 272px;
+  min-width: 0;
+}
+
+.product-image-1 {
+  width: 100%;
+  outline: 1px solid rgb(217 217 217);
+  outline-offset: -1px;
+  object-fit: cover;
+}
+
+.product-details-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.flex_col3 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px 0;
+  margin: 0 0 17px;
+  width: 125px;
+  min-width: 0;
+}
+
+.product-name-1 {
+  margin: 0 38px 0 0;
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0 / 65.8%);
+
+  @include md {
+    margin: 0 32px 0 0;
+  }
+
+  @include xs {
+    margin: 0 16px 0 0;
+  }
+
+  @include tn {
+    margin: 0 8px 0 0;
+  }
+}
+
+.product-description-1 {
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.product-price-1 {
+  display: flex;
+  justify-content: flex-end;
+  margin: 22px 0 0;
+  width: 30px;
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: right;
+}
+
+.product-image-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 147px 0;
+  margin: 2px 0 163px;
+  width: 26px;
+
+  @include md {
+    margin: 2px 0 150px;
+  }
+
+  @include xs {
+    gap: 80px 0;
+    margin: 2px 0 80px;
+  }
+
+  @include tn {
+    gap: 50px 0;
+    margin: 2px 0 50px;
+  }
+}
+
+.image5 {
+  margin: 0 11px 0 4px;
+  width: 11px;
+  height: 10px;
+  object-fit: cover;
+
+  @include tn {
+    margin: 0 8px 0 4px;
+  }
+}
+
+.product-details-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-image-1 {
+  width: 26px;
+  height: 24px;
+  aspect-ratio: 1.08;
+  object-fit: cover;
+}
+
+.product-quantity-2 {
+  position: relative;
+  min-height: 24px;
+}
+
+.content_box1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 26px;
+  outline: 1px solid rgb(138 138 138);
+  outline-offset: -1px;
+  transform: translate(-50%, 0);
+}
+
+.content_box {
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid rgb(138 138 138);
+  outline-offset: -1px;
+}
+
+.quantity-number-2 {
+  margin: 4px 10px 5px 11px;
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+
+  @include tn {
+    margin: 4px 8px 5px;
+  }
+}
+
+.quantity-summary-2 {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  width: 5px;
+  height: 15px;
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  transform: translate(-50%, 0);
+}
+
+.additional-image-2 {
+  width: 26px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.flex_row3 {
+  display: flex;
+  gap: 0 14px;
+  width: 313px;
+  min-width: 0;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.flex_col4 {
+  display: flex;
+  flex-direction: column;
+  gap: 11px 0;
+  width: 273px;
+  min-width: 0;
+}
+
+.cover {
+  margin: 0 1px 0 0;
+  width: 99.63%;
+  outline: 1px solid rgb(217 217 217);
+  outline-offset: -1px;
+  object-fit: cover;
+}
+
+.flex_row4 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.flex_col5 {
+  display: flex;
+  flex-direction: column;
+  gap: 7px 0;
+  margin: 0 0 17px;
+  width: 146px;
+  min-width: 0;
+}
+
+.desc1 {
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0 / 65.8%);
+}
+
+.paragraph {
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.paragraph1 {
+  display: flex;
+  justify-content: flex-end;
+  margin: 22px 0 0;
+  width: 30px;
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: right;
+}
+
+.flex_col6 {
+  display: flex;
+  flex-direction: column;
+  gap: 147px 0;
+  margin: 2px 0 163px;
+  width: 26px;
+
+  @include md {
+    margin: 2px 0 150px;
+  }
+
+  @include xs {
+    gap: 80px 0;
+    margin: 2px 0 80px;
+  }
+
+  @include tn {
+    gap: 50px 0;
+    margin: 2px 0 50px;
+  }
+}
+
+.image6 {
+  margin: 0 12px 0 4px;
+  width: 10px;
+  height: 10px;
+  object-fit: cover;
+
+  @include tn {
+    margin: 0 8px 0 4px;
+  }
+}
+
+.flex_col7 {
+  display: flex;
+  flex-direction: column;
+}
+
+.image10 {
+  width: 26px;
+  height: 24px;
+  aspect-ratio: 1.08;
+  object-fit: cover;
+}
+
+.content_box4 {
+  position: relative;
+  min-height: 24px;
+}
+
+.content_box3 {
+  position: absolute;
+  top: -1px;
+  bottom: 1px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 26px;
+  outline: 1px solid rgb(138 138 138);
+  outline-offset: -1px;
+  transform: translate(-50%, 0);
+}
+
+.rect2 {
+  min-height: 24px;
+  outline: 1px solid rgb(138 138 138);
+  outline-offset: -1px;
+}
+
+.desc {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  width: 5px;
+  height: 15px;
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  transform: translate(-50%, 0);
+}
+
+.image9 {
+  width: 26px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.order-summary-section {
+  display: flex;
+  flex-direction: column;
+  margin: 86px 0 19px;
+  width: 314px;
+  min-width: 0;
+  outline: 1px solid rgb(217 217 217);
+  outline-offset: -1px;
+
+  @include sm {
+    margin: 0;
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.flex_col8 {
+  display: flex;
+  flex-direction: column;
+  gap: 76px 0;
+  margin: 53px auto 38px;
+  width: 238.97222900390625px;
+  max-width: 85%;
+
+  @include sm {
+    width: 85%;
+  }
+
+  @include tn {
+    gap: 50px 0;
+    margin: 50px auto 38px;
+  }
+}
+
+.order-summary-title {
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 1px;
+}
+
+.summary-row-subtotal {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 28px 3px 0 0;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.subtotal-label {
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 1px;
+}
+
+.subtotal-amount {
+  display: flex;
+  justify-content: flex-end;
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+.order-summary-divider {
+  margin: 45px 0 0 4px;
+  width: 98.34%;
+  height: 1px;
+  min-height: 1px;
+  background-color: rgb(217 217 217);
+}
+
+.summary-row-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 25px 3px 0 1px;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.total-label {
+  font: 500 16px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 1px;
+}
+
+.total-label_span0 {
+  font: 500 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+  color: rgb(30 30 30);
+}
+
+.total-label_span1 {
+  font: 500 0.75em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+  color: rgb(30 30 30);
+}
+
+.total-label_span2 {
+  font: 500 0.75em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+  color: rgb(0 0 0 / 54.9%);
+}
+
+.total-amount {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 1px;
+  font: 500 16px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+.continue-button {
+  display: flex;
+  justify-content: center;
+  margin: 0 3px 0 1px;
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+  background-color: rgb(217 217 217);
+  padding: 13.5px 8px;
+}

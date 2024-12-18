@@ -1,0 +1,21 @@
+.dropdown-item {
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ccc;
+  }
+
+  a {
+    padding: 0;
+    text-decoration: none;
+    color: #213547;
+  }
+}
+.menuitem-name {
+  margin-left: 15px;
+}

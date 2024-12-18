@@ -1,0 +1,80 @@
+.category-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.category-buttons {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.addcategory-form {
+  display: flex;
+  align-items: center;
+}
+
+.addcategory-form-label {
+  width: 50%;
+  font-weight: 550;
+  font-size: 1.2rem;
+}
+
+.addcategory-form-input,
+.addcategory-form-select {
+  width: 70%;
+  font-weight: 550;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.addcategory-form-button {
+  width: 50%;
+  font-weight: 550;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(163, 163, 163);
+  }
+}
+
+.category-datagrid {
+  margin: 40px 0 0 0;
+  height: 75vh;
+
+  .MuiDataGrid-root {
+    border: none;
+  }
+
+  .MuiDataGrid-cell {
+    border-bottom: none;
+  }
+
+  .name-column--cell {
+    /* Custom styles for name column cells can be added here */
+  }
+
+  .MuiDataGrid-columnHeaders {
+    border-bottom: none;
+  }
+
+  .MuiDataGrid-virtualScroller {
+    /* Custom background color can be added here */
+  }
+
+  .MuiDataGrid-footerContainer {
+    border-top: none;
+  }
+
+  .MuiCheckbox-root {
+    /* Custom checkbox styles can be added here */
+  }
+
+  .MuiDataGrid-toolbarContainer .MuiButton-text {
+    /* Custom toolbar button text color can be added here */
+  }
+}

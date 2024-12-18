@@ -1,0 +1,719 @@
+@use "./utils" as *;
+// @use "../global" as *;
+
+.products_section {
+  display: flex;
+  flex-direction: column;
+  background: var(--src) center center / cover no-repeat;
+  background-color: rgb(255 255 255);
+  overflow: hidden;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+  margin: 48px auto 135px;
+  width: 100%;
+  max-width: 1400px;
+
+  @include xs {
+    margin: 48px auto 80px;
+  }
+
+  @include tn {
+    margin: 48px auto 50px;
+  }
+}
+
+.nav_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 0 7px 0 2px;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.nav_items_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 13px 0 21px;
+  width: 325px;
+  min-width: 0;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.logo_image {
+  width: 28px;
+  height: 18px;
+  object-fit: cover;
+}
+
+.nav_link_home {
+  margin: 0 0 2px;
+  font: 500 13px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.nav_link_collections {
+  margin: 0 0 2px;
+  font: 500 13px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.nav_link_new {
+  margin: 0 0 2px;
+  font: 500 13px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.cart_icon_image {
+  margin: 7px 0 10px;
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.action_row {
+  display: flex;
+  gap: 0 22px;
+  width: 214px;
+  min-width: 0;
+
+  @include xs {
+    column-gap: 16px;
+  }
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.cart_btn {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2px;
+  min-width: 72px;
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  text-align: center;
+  background-color: rgb(0 0 0);
+  border-radius: 22px;
+  padding: 17.5px 18px;
+  letter-spacing: 2px;
+}
+
+.user_icon_image {
+  margin: 0 0 2px;
+  width: 48px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.search_icon_image {
+  margin: 2px 0 0;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.product_listing_section {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin-left: 35%;
+  width: 738px;
+  max-width: 85%;
+
+  @include lg {
+    margin: 58px auto 0;
+  }
+
+  @include md {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+
+  @include tn {
+    margin: 50px auto 0;
+  }
+}
+
+.breadcrumb_col {
+  display: flex;
+  flex-direction: column;
+  width: 367px;
+  min-width: 0;
+
+  @include md {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.breadcrumb_text {
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 1px;
+}
+
+.breadcrumb_text_box {
+  margin: 0 1px;
+}
+
+.breadcrumb_text_span0 {
+  font: 500 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+  color: rgb(0 0 0 / 65.8%);
+}
+
+.breadcrumb_text_span1 {
+  font: 500 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+}
+
+.products_heading {
+  margin: 12px 0 0;
+  font: 700 20px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 1px;
+
+  @include md {
+    align-items: flex-start;
+    font-size: 18px;
+  }
+
+  @include xxs {
+    font-size: 16px;
+  }
+}
+
+.search_container {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0 0;
+  background-color: rgb(217 217 217);
+  border-radius: 2px;
+}
+
+.search_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 16px 30px 18px 16px;
+
+  @include xs {
+    margin: 16px 16px 18px;
+  }
+
+  @include xxs {
+    margin: 16px auto 18px;
+  }
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.search_icon {
+  margin: 2px 0 0;
+  width: 14px;
+  height: 14px;
+  object-fit: cover;
+}
+
+.search_placeholder {
+  margin: 0 0 1px;
+  font: 400 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0 / 65.8%);
+  letter-spacing: 2px;
+}
+
+.category_grid {
+  display: grid;
+  align-content: start;
+  gap: 2px 14px;
+  margin: 65px 0 0;
+  width: 331px;
+  min-width: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  @include md {
+    margin: 0;
+    width: 100%;
+    min-width: unset;
+  }
+
+  @include tn {
+    column-gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.category_item_new {
+  display: flex;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: span 1;
+  font: 500 10px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+  padding: 6px 38px;
+  outline: 0.5px solid rgb(94 94 94);
+  outline-offset: -0.5px;
+}
+
+.category_item_shirts {
+  display: flex;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: span 1;
+  font: 400 10px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(94 94 94);
+  text-align: center;
+  padding: 6px 36px;
+  outline: 0.5px solid rgb(163 163 163);
+  outline-offset: -0.5px;
+}
+
+.category_item_polo_shirts {
+  display: flex;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: span 1;
+  font: 400 10px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(94 94 94);
+  text-align: center;
+  padding: 6px 24px;
+  outline: 0.5px solid rgb(163 163 163);
+  outline-offset: -0.5px;
+}
+
+.category_item_best_sellers {
+  display: flex;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: span 1;
+  font: 400 10px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(94 94 94);
+  text-align: center;
+  padding: 6px 31px 6px 15px;
+  outline: 0.5px solid rgb(163 163 163);
+  outline-offset: -0.5px;
+}
+
+.category_item_tshirts {
+  display: flex;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: span 1;
+  font: 400 10px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(94 94 94);
+  text-align: center;
+  padding: 6px 34px 6px 27px;
+  outline: 0.5px solid rgb(163 163 163);
+  outline-offset: -0.5px;
+}
+
+.category_item_jeans {
+  display: flex;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: span 1;
+  font: 400 10px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(94 94 94);
+  text-align: center;
+  padding: 6px 36px;
+  outline: 0.5px solid rgb(163 163 163);
+  outline-offset: -0.5px;
+}
+
+.filter_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  margin: 40px 0 0;
+
+  @include md {
+    flex-direction: column;
+    gap: 30px 10px;
+  }
+}
+
+.filters_header_col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+  width: 266px;
+  margin-bottom: auto;
+  margin-left: 50px;
+  min-width: 0;
+
+  @include md {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.filters_heading {
+  margin: 0 1px;
+  font: 700 16px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.filter_options_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.availability_filter {
+  display: flex;
+  flex-direction: column;
+  background: var(--src) center center / cover no-repeat;
+}
+
+.availability_row {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 33px 1px;
+  width: 169px;
+  max-width: 85%;
+}
+
+.filter_availability_label {
+  font: 700 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.availability_count {
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+  display: flex;
+  margin-right: 100px;
+}
+
+.availability_count_box {
+  margin: 18px 0 0 29px;
+
+  @include xs {
+    margin: 18px 0 0 16px;
+  }
+
+  @include tn {
+    margin: 18px 0 0 8px;
+  }
+}
+
+.availability_count_span0 {
+  font: 500 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+}
+
+.availability_count_span1 {
+  font: 700 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+  color: rgb(0 13 138);
+}
+
+.availability_count_span2 {
+  font: 500 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+}
+
+.out_of_stock_info {
+  font: 500 12px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.out_of_stock_info_box {
+  margin: 23px 7px 0 29px;
+
+  @include xs {
+    margin: 23px 7px 0 16px;
+  }
+
+  @include tn {
+    margin: 23px 7px 0 8px;
+  }
+}
+
+.out_of_stock_info_span0 {
+  font: 500 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+}
+
+.out_of_stock_info_span1 {
+  font: 700 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+  color: rgb(0 13 138);
+}
+
+.out_of_stock_info_span2 {
+  font: 500 1em/1.2 "Beatrice Deck Trial", Helvetica, Arial, serif;
+}
+
+.category_filter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  margin: 15px 0 0 1px;
+}
+
+.category_row {
+  // display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.filter_category_label {
+  margin: 0 0 2px;
+  font: 700 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.category_icon_image {
+  margin: 8px 0 0;
+  width: 7px;
+  height: 11px;
+  object-fit: cover;
+}
+
+.divider_line {
+  width: 100%;
+  height: 1px;
+  object-fit: cover;
+}
+
+.price_filter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  margin: 31px 0 0 1px;
+}
+
+.price_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.filter_price_label {
+  margin: 0 0 2px;
+  font: 700 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.price_icon_image {
+  margin: 8px 0 0;
+  width: 7px;
+  height: 11px;
+  object-fit: cover;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  object-fit: cover;
+}
+
+.rating_filter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  margin: 28px 0 0 1px;
+}
+
+.rating_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.filter_rating_label {
+  margin: 0 0 2px;
+  font: 700 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.rating_icon_image {
+  margin: 8px 0 0;
+  width: 7px;
+  height: 11px;
+  object-fit: cover;
+}
+
+.flex_row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 10px;
+  margin-right: 450px;
+  width: 882px;
+  min-width: 0;
+
+  @include md {
+    width: 100%;
+    min-width: unset;
+  }
+
+  @include tn {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 8px;
+  }
+}
+
+.product_col_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 31px 0;
+  width: 272px;
+  min-width: 0;
+  flex: 0 1 calc(33.33% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+  @include tn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.product_image_1 {
+  width: 97.43%;
+  max-height: 320px;
+  outline: 1px solid rgb(217 217 217);
+  outline-offset: -1px;
+  object-fit: cover;
+}
+
+.product_details_row_1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  width: 100%;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.product_name_1 {
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.product_price_1 {
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.product_col_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 31px 0;
+  width: 272px;
+  min-width: 0;
+
+  @include tn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.product_image_2 {
+  width: 97.43%;
+  outline: 1px solid rgb(217 217 217);
+  outline-offset: -1px;
+  object-fit: cover;
+}
+
+.product_details_row_2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  width: 100%;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.product_name_2 {
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.product_price_2 {
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.product_col_3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px 0;
+  width: 272px;
+  min-width: 0;
+
+  @include tn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.product_image_3 {
+  width: 97.43%;
+  outline: 1px solid rgb(217 217 217);
+  outline-offset: -1px;
+  object-fit: cover;
+}
+
+.product_details_row_3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  width: 100%;
+
+  @include tn {
+    column-gap: 8px;
+  }
+}
+
+.product_name_3 {
+  margin: 1px 0 0;
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.product_price_3 {
+  margin: 0 0 1px;
+  font: 500 14px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}

@@ -1,0 +1,42 @@
+.account-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.account-buttons {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.addaccount-form {
+  display: flex;
+  align-items: center;
+}
+
+.addaccount-form-label {
+  width: 50%;
+  font-weight: 550;
+  font-size: 1.2rem;
+}
+
+.addaccount-form-input,
+.addaccount-form-select {
+  width: 70%;
+  font-weight: 550;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.addaccount-form-button {
+  width: 50%;
+  font-weight: 550;
+  font-size: 1.2rem;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: rgb(163, 163, 163);
+  }
+}

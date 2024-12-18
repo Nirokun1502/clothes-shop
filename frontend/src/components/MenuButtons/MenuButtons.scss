@@ -1,0 +1,33 @@
+.container-button {
+  display: flex;
+  width: 350px;
+  justify-content: space-evenly;
+}
+
+.container-button > button {
+  height: 60px;
+  width: 150px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.register-button {
+  border: 2.5px solid #7146c3;
+  background-color: transparent;
+  color: #15866a;
+
+  &:hover {
+    background-color: #bbdcd4;
+  }
+}
+
+.login-button {
+  border: 2.5px solid #7146c3;
+  background-color: #7146c3;
+  color: #22dbad;
+
+  &:hover {
+    border: 2.5px solid #613995;
+    background-color: #613995;
+  }
+}

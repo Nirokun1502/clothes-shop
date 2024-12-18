@@ -1,0 +1,20 @@
+.wrapper {
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.container > * {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+}

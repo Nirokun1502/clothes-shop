@@ -1,0 +1,269 @@
+@use "./utils" as *;
+
+.password_reset_section {
+  display: flex;
+  flex-direction: column;
+  background: var(--src) center center / cover no-repeat;
+  background-color: rgb(255 255 255);
+  overflow: hidden;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+  gap: 79px 0;
+  margin: 53px auto 56px;
+  width: 936.0555419921875px;
+  max-width: 85%;
+
+  @include tn {
+    gap: 50px 0;
+    margin: 50px auto;
+  }
+}
+
+.password_reset_title {
+  font: 400 32px/1.25 Abel, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+
+  @include md {
+    align-items: flex-start;
+    font-size: 30px;
+  }
+
+  @include xxs {
+    font-size: 26px;
+  }
+}
+
+.flex_col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 121px 0;
+
+  @include xs {
+    gap: 80px 0;
+  }
+
+  @include tn {
+    gap: 50px 0;
+  }
+}
+
+.flex_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+
+  @include lg {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}
+
+.input_email_prompt {
+  margin: 16px 0 63px;
+  font: 500 16px/1.12 Ubuntu, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+
+  @include lg {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.flex_col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 22px 0;
+  margin: 2px 0 0;
+  width: 585px;
+  min-width: 0;
+
+  @include lg {
+    margin: 0;
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.rect {
+  min-height: 55px;
+  outline: 1px solid rgb(177 177 177);
+  outline-offset: -1px;
+}
+
+.email_verification_instruction {
+  font: 500 16px/1.12 Ubuntu, Helvetica, Arial, serif;
+  color: rgb(9 97 179);
+  letter-spacing: 2px;
+  text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+  margin-left: 20px;
+}
+
+.confirm_email_btn {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 31px;
+  min-width: 166px;
+  font: 400 24px/1.33 Roboto, Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  text-align: center;
+  background-color: rgb(0 0 0);
+  border-radius: 22px;
+  padding: 17px 32px;
+
+  @include lg {
+    margin: 0;
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+.flex_col3 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 8.12%;
+  width: 577px;
+  max-width: 85%;
+
+  @include md {
+    margin: 0 auto;
+  }
+}
+
+.flex_row1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 0 10px 0 13px;
+
+  @include tn {
+    column-gap: 8px;
+    margin: 0 8px;
+  }
+}
+
+.input_verification_code_prompt {
+  margin: 13px 0 24px;
+  font: 500 16px/1.12 Ubuntu, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+}
+
+.rect1 {
+  width: 346px;
+  min-height: 55px;
+  outline: 1px solid rgb(177 177 177);
+  outline-offset: -1px;
+}
+
+.flex_row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  margin: 69px 10px 0 0;
+
+  @include sm {
+    flex-direction: column;
+    gap: 30px 10px;
+  }
+
+  @include tn {
+    margin: 50px 8px 0 0;
+  }
+}
+
+.input_new_password_prompt {
+  font: 500 16px/1.12 Ubuntu, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.rect11 {
+  width: 346px;
+  height: 55px;
+  min-height: 55px;
+  outline: 1px solid rgb(177 177 177);
+  outline-offset: -1px;
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.flex_row3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 72px 10px 0 5px;
+
+  @include sm {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+
+  @include tn {
+    margin: 50px 8px 0 5px;
+  }
+}
+
+.confirm_password_prompt {
+  margin: 13px 0 25px;
+  font: 500 16px/1.12 Ubuntu, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: 2px;
+
+  @include sm {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.rect2 {
+  width: 346px;
+  min-height: 56px;
+  outline: 1px solid rgb(177 177 177);
+  outline-offset: -1px;
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.password_mismatch_warning {
+  display: flex;
+  justify-content: flex-end;
+  margin: 13px auto 0;
+  width: 468.97222900390625px;
+  max-width: 85%;
+  font: 500 16px/1.12 Ubuntu, Helvetica, Arial, serif;
+  color: rgb(9 97 179);
+  text-align: right;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+
+.confirm_password_btn {
+  display: flex;
+  justify-content: center;
+  margin: 38px 0 0 auto;
+  width: 166px;
+  max-width: 100%;
+  font: 400 24px/1.33 Roboto, Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  text-align: center;
+  background-color: rgb(0 0 0);
+  border-radius: 22px;
+  padding: 17px 32px;
+  text-wrap: nowrap;
+}

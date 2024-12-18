@@ -1,0 +1,25 @@
+const routes = {
+  default: "/",
+  home: "/home",
+  adminhome: "/admin",
+  account: "/account",
+  role: "/role",
+  permission: "/permission",
+  about: "/about",
+  profile: "/profile",
+  unauthorized: "/unauthorized",
+  product: "/product",
+  productDetail: "/product/:productId",
+  cart: "/cart",
+  checkout: "/checkout",
+  order: "/order",
+  userprofile: "/userprofile",
+  statistic: "/statistic",
+  category: "/category",
+  producttable: "/producttable",
+  ordertable: "/ordertable",
+  changepassword: "/changepassword",
+  createorder: "/createorder",
+};
+
+export default routes;

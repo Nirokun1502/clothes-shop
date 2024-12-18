@@ -1,0 +1,41 @@
+.role-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.role-buttons {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.addrole-form {
+  display: flex;
+  align-items: center;
+}
+
+.addrole-form-label {
+  width: 50%;
+  font-weight: 550;
+  font-size: 1.2rem;
+}
+
+.addrole-form-input {
+  width: 70%;
+  font-weight: 550;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.addrole-form-button {
+  width: 50%;
+  font-weight: 550;
+  font-size: 1.2rem;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: rgb(163, 163, 163);
+  }
+}

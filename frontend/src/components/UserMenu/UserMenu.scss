@@ -1,0 +1,40 @@
+.usermenu-trigger {
+  width: 250px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  // justify-content: space-evenly;
+  text-align: center;
+  color: #7146c3;
+  font-weight: 500;
+
+  &.menu-hover .user-button {
+    border: 2.5px solid #15866a;
+    color: #15866a;
+    background-color: #baffee;
+  }
+  &.menu-hover {
+    color: #15866a;
+  }
+}
+
+.user-button {
+  width: 55px;
+  height: 55px;
+  border: 2.5px solid black;
+  border-radius: 50%;
+  padding: 0;
+  background-color: transparent;
+  // color: #7146c3;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 240px;
+  right: 5px;
+  //   margin-right: 100px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px 15px;
+}
